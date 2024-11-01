@@ -23,7 +23,7 @@ const verifyJWT = asyncHandler(async (req, res, next) => {
     }
 
     req.user = user;
-    next(); // Call next() to pass control
+    next();
   } catch (error) {
     throw new ApiError(401, "Invalid or expired token");
   }

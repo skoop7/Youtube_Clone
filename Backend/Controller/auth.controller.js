@@ -105,4 +105,14 @@ const logout = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, user, `User ${user.name} has logged out`));
 });
 
-module.exports = { signup, login, logout };
+const getCurrentUser = asyncHandler(async (req, res) => {
+  const loggedInUser = await User.findById(req.user?._id).select(
+    "-password -refreshToken"
+  );
+
+  return res
+    .status(200)
+    .json(new ApiResponse(200, loggedInUser, "current user fetched"));
+});
+
+module.exports = { signup, login, logout, getCurrentUser };
