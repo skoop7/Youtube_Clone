@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# dotenv environment variables
+.env
+
+# Optional: Other common files and folders to ignore
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.idea/
+.vscode/
+dist/
+build/
