@@ -80,7 +80,7 @@ This project is a YouTube clone, developed from a strong desire to create a plat
      - Title and description
      - Channel name
      - Like and dislike buttons
-     - Comment section with the ability to add, edit, and delete comments.
+     - Comment section with the ability to add,and delete comments.
    - New comments are saved in the database and linked to the video.
 
 5. **Channel Page**
